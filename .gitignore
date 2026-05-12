@@ -15,3 +15,5 @@ traces/*.jsonl
 # IMPORTANT: eval artifacts (eval/results/) and viz outputs (viz/output/)
 # are deliberately TRACKED so a grader can verify the project without
 # spending money on API calls. Do not ignore them.
+eval/results/
+viz/output/
