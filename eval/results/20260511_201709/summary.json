@@ -1,0 +1,30 @@
+{
+  "n_queries": 10,
+  "n_success": 10,
+  "success_rate": 1.0,
+  "duration_sec": {
+    "count": 10,
+    "mean": 4.405896449089051,
+    "median": 4.388451099395752,
+    "min": 3.5837368965148926,
+    "max": 5.537269830703735
+  },
+  "tool_usage": {
+    "calculator_tool": 10
+  },
+  "tool_latency_ms": {
+    "calculator_tool": {
+      "count": 10,
+      "mean": 0.11320114135742188,
+      "median": 0.1087188720703125,
+      "min": 0.04673004150390625,
+      "max": 0.17714500427246094
+    }
+  },
+  "by_category": {
+    "math": {
+      "n": 10,
+      "ok": 10
+    }
+  }
+}

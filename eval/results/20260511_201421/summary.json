@@ -1,0 +1,30 @@
+{
+  "n_queries": 3,
+  "n_success": 3,
+  "success_rate": 1.0,
+  "duration_sec": {
+    "count": 3,
+    "mean": 7.0641021728515625,
+    "median": 6.8837668895721436,
+    "min": 6.428004741668701,
+    "max": 7.880534887313843
+  },
+  "tool_usage": {
+    "search_tool": 3
+  },
+  "tool_latency_ms": {
+    "search_tool": {
+      "count": 3,
+      "mean": 1354.0489673614502,
+      "median": 1343.120813369751,
+      "min": 1295.6440448760986,
+      "max": 1423.382043838501
+    }
+  },
+  "by_category": {
+    "factual": {
+      "n": 3,
+      "ok": 3
+    }
+  }
+}

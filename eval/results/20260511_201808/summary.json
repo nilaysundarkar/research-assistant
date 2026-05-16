@@ -1,0 +1,58 @@
+{
+  "n_queries": 40,
+  "n_success": 40,
+  "success_rate": 1.0,
+  "duration_sec": {
+    "count": 40,
+    "mean": 9.72877311706543,
+    "median": 9.033421039581299,
+    "min": 3.1449759006500244,
+    "max": 24.37248182296753
+  },
+  "tool_usage": {
+    "search_tool": 27,
+    "calculator_tool": 18,
+    "code_exec_tool": 12
+  },
+  "tool_latency_ms": {
+    "search_tool": {
+      "count": 27,
+      "mean": 1506.601642679285,
+      "median": 1540.8430099487305,
+      "min": 197.4940299987793,
+      "max": 1951.5361785888672
+    },
+    "calculator_tool": {
+      "count": 18,
+      "mean": 0.16310479905870226,
+      "median": 0.13208389282226562,
+      "min": 0.08797645568847656,
+      "max": 0.7259845733642578
+    },
+    "code_exec_tool": {
+      "count": 12,
+      "mean": 986.2593213717142,
+      "median": 691.917896270752,
+      "min": 619.5049285888672,
+      "max": 3187.1190071105957
+    }
+  },
+  "by_category": {
+    "factual": {
+      "n": 10,
+      "ok": 10
+    },
+    "math": {
+      "n": 10,
+      "ok": 10
+    },
+    "code": {
+      "n": 10,
+      "ok": 10
+    },
+    "mixed": {
+      "n": 10,
+      "ok": 10
+    }
+  }
+}

@@ -32,7 +32,7 @@ MAX_FIGURES = 4
 # Shared matplotlib config directory. Reused across calls so matplotlib's
 # font cache is built once per process instead of once per tool call.
 # Contains only computed-from-system data, so sharing is safe.
-_SHARED_MPLCONFIGDIR = Path(tempfile.gettempdir()) / "llm_agent_mplconfig"
+_SHARED_MPLCONFIGDIR = Path(tempfile.gettempdir()) / "research_agent_mplconfig"
 _SHARED_MPLCONFIGDIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -42,7 +42,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as _plt
 
-_FIG_DIR = os.environ["LLM_AGENT_FIG_DIR"]
+_FIG_DIR = os.environ["RESEARCH_AGENT_FIG_DIR"]
 
 def _save_open_figures():
     for i, num in enumerate(_plt.get_fignums()):
@@ -80,7 +80,7 @@ def code_exec_tool(
     if not isinstance(python_code, str) or not python_code.strip():
         return {"ok": False, "error": "python_code must be a non-empty string"}
 
-    workdir = Path(tempfile.mkdtemp(prefix="llm_agent_exec_"))
+    workdir = Path(tempfile.mkdtemp(prefix="research_agent_exec_"))
     fig_dir = workdir / "figures"
     fig_dir.mkdir()
     script = workdir / "user_script.py"
@@ -96,7 +96,7 @@ def code_exec_tool(
 
     env = {
         **os.environ,
-        "LLM_AGENT_FIG_DIR": str(fig_dir),
+        "RESEARCH_AGENT_FIG_DIR": str(fig_dir),
         "MPLBACKEND": "Agg",
         "MPLCONFIGDIR": str(_SHARED_MPLCONFIGDIR),
         "PYTHONDONTWRITEBYTECODE": "1",
