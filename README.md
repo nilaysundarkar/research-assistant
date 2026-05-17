@@ -36,7 +36,7 @@ uv pip install -e ".[dev]"
 
 ## Pre-recorded eval data
 
-To let graders verify the project without spending on API calls, **the full evaluation run is pre-recorded and committed to this repo**. The artifacts under `eval/results/` were produced by the author running `python eval/run_eval.py` against the live Anthropic Claude and Tavily APIs (using the author's own API keys). What's committed:
+To let graders verify the project without spending on API calls, **the full evaluation run is pre-recorded and committed to this repo**. I produced the artifacts under `eval/results/` by running `python eval/run_eval.py` against the live Anthropic Claude and Tavily APIs (using my own API keys). What's committed:
 
 - `eval/results/<timestamp>/traces.jsonl` — one full reasoning trace per query (model messages, tool calls, tool results, latencies, token counts)
 - `eval/results/<timestamp>/summary.json` — aggregate metrics (per-tool latency stats, success rate, by-category breakdown)
